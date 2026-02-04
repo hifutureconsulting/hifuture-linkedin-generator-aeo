@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiFuture LinkedIn AEO Strategy Generator | Get Your Personalized Content Strategy</title>
+    <meta name="description" content="Get AI-powered LinkedIn content strategies based on psychological principles. Free personalized analysis by HiFuture">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div class="screen active" id="welcomeScreen">
+            <div class="welcome-content">
+                <div class="logo-container">
+                    <i class="fab fa-linkedin"></i>
+                    <h1>HiFuture LinkedIn AEO Strategy Generator</h1>
+                </div>
+                <h2>Get Your Personalized Content Strategy</h2>
+                <p class="subtitle">Based on psychological principles and viral content analysis</p>
+                
+                <div class="value-props">
+                    <div class="value-prop">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Psychological profiling based on your unique goals</p>
+                    </div>
+                    <div class="value-prop">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Data-Driven Strategy</h3>
+                        <p>Proven tactics from viral LinkedIn content</p>
+                    </div>
+                    <div class="value-prop">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Actionable Results</h3>
+                        <p>Custom prompts and optimization plans</p>
+                    </div>
+                    <div class="value-prop">
+                        <i class="fas fa-users-cog"></i>
+                        <h3>Expert Guidance</h3>
+                        <p>Professional consulting from HiFuture experts</p>
+                    </div>
+                </div>
+
+                <button class="btn-primary" onclick="startQuiz()">
+                    Start Your Free Strategy Assessment
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                
+                <p class="small-text">Takes only 2 minutes • Professional consultation</p>
+            </div>
+        </div>
+
+        <!-- Question 1: Content Niche -->
+        <div class="screen" id="question1">
+            <div class="question-container">
+                <span class="step-indicator">Question 1 of 5</span>
+                <h2 class="question-title">What's your primary content niche?</h2>
+                <p class="question-subtitle">Select the category that best describes your expertise</p>
+                
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectOption('niche', 'IT', this)">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>IT & Technology</h3>
+                        <p>Software, programming, tech trends</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'Business', this)">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Business Strategy</h3>
+                        <p>Leadership, management, entrepreneurship</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'Marketing', this)">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Marketing & Growth</h3>
+                        <p>Digital marketing, brand building</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'Finance', this)">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Finance & Investment</h3>
+                        <p>Financial planning, investing, wealth</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'HR', this)">
+                        <i class="fas fa-users"></i>
+                        <h3>HR & Talent</h3>
+                        <p>Recruitment, people management</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'Healthcare', this)">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Healthcare</h3>
+                        <p>Medical, wellness, health tech</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'E-commerce', this)">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>E-commerce</h3>
+                        <p>Online retail, dropshipping</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'Coaching', this)">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Coaching & Training</h3>
+                        <p>Personal development, education</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'RealEstate', this)">
+                        <i class="fas fa-home"></i>
+                        <h3>Real Estate</h3>
+                        <p>Property, investment, development</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'SaaS', this)">
+                        <i class="fas fa-cloud"></i>
+                        <h3>SaaS & Startups</h3>
+                        <p>Software products, tech startups</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'Consulting', this)">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Consulting</h3>
+                        <p>Business advisory, strategy</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption('niche', 'Creative', this)">
+                        <i class="fas fa-palette"></i>
+                        <h3>Creative & Design</h3>
+                        <p>Design, branding, content creation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2: Network Size & Engagement -->
+        <div class="screen" id="question2">
+            <div class="question-container">
+                <span class="step-indicator">Question 2 of 5</span>
+                <h2 class="question-title">What's your LinkedIn network size?</h2>
+                <p class="question-subtitle">This helps us understand your current reach</p>
+                
+                <div class="options-list">
+                    <div class="option-card-horizontal" onclick="selectOption('networkSize', '0-500', this)">
+                        <div class="option-content">
+                            <h3>0 - 500 connections</h3>
+                            <p>Building foundation</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="option-card-horizontal" onclick="selectOption('networkSize', '500-1000', this)">
+                        <div class="option-content">
+                            <h3>500 - 1,000 connections</h3>
+                            <p>Growing network</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="option-card-horizontal" onclick="selectOption('networkSize', '1000-5000', this)">
+                        <div class="option-content">
+                            <h3>1,000 - 5,000 connections</h3>
+                            <p>Established presence</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="option-card-horizontal" onclick="selectOption('networkSize', '5000+', this)">
+                        <div class="option-content">
+                            <h3>5,000+ connections</h3>
+                            <p>Influencer status</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="engagement-section">
+                    <h3>What's your average post engagement rate?</h3>
+                    <p class="context-text"><i class="fas fa-info-circle"></i> Most creators get 2-4% engagement</p>
+                    
+                    <div class="input-group">
+                        <input type="number" id="engagementRate" class="input-field" placeholder="Enter percentage (e.g., 3)" min="0" max="100" step="0.1">
+                        <span class="input-suffix">%</span>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="btn-secondary" onclick="goToStep(1)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="btn-primary" onclick="validateAndNext(2)">
+                        Continue <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3: Primary Goal -->
+        <div class="screen" id="question3">
+            <div class="question-container">
+                <span class="step-indicator">Question 3 of 5</span>
+                <h2 class="question-title">What's your primary LinkedIn goal?</h2>
+                <p class="question-subtitle">Select up to 3 objectives for content creation</p>
+                <p class="selection-counter" id="goalCounter">Selected: <span id="goalCount">0</span>/3</p>
+                
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectMultipleOption('goal', 'SSI', this, 3)">
+                        <i class="fas fa-trophy"></i>
+                        <h3>SSI Score Improvement</h3>
+                        <p>Boost Social Selling Index</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('goal', 'Authority', this, 3)">
+                        <i class="fas fa-crown"></i>
+                        <h3>Brand Authority</h3>
+                        <p>Establish thought leadership</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('goal', 'Engagement', this, 3)">
+                        <i class="fas fa-heart"></i>
+                        <h3>More Reactions</h3>
+                        <p>Increase likes, comments, shares</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('goal', 'Customers', this, 3)">
+                        <i class="fas fa-user-plus"></i>
+                        <h3>Customer Acquisition</h3>
+                        <p>Generate leads and sales</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('goal', 'Professional', this, 3)">
+                        <i class="fas fa-star"></i>
+                        <h3>Professional Look</h3>
+                        <p>Build credible personal brand</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('goal', 'Leads', this, 3)">
+                        <i class="fas fa-magnet"></i>
+                        <h3>Lead Generation</h3>
+                        <p>Attract qualified prospects</p>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="btn-secondary" onclick="goToStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="btn-primary" onclick="validateMultipleAndNext(3, 'goal', 1)">
+                        Continue <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 4: Biggest Challenge -->
+        <div class="screen" id="question4">
+            <div class="question-container">
+                <span class="step-indicator">Question 4 of 5</span>
+                <h2 class="question-title">What's your biggest content challenge?</h2>
+                <p class="question-subtitle">Select up to 3 challenges you're facing</p>
+                <p class="selection-counter" id="challengeCounter">Selected: <span id="challengeCount">0</span>/3</p>
+                
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectMultipleOption('challenge', 'TopicIdeas', this, 3)">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Topic Ideas</h3>
+                        <p>Not sure what to post about</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('challenge', 'ContentFormats', this, 3)">
+                        <i class="fas fa-th-large"></i>
+                        <h3>Content Formats</h3>
+                        <p>Struggle with format variety</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('challenge', 'FindingTrends', this, 3)">
+                        <i class="fas fa-fire"></i>
+                        <h3>Finding Trends</h3>
+                        <p>Missing viral opportunities</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('challenge', 'LowVisibility', this, 3)">
+                        <i class="fas fa-eye-slash"></i>
+                        <h3>Low Visibility</h3>
+                        <p>Posts not reaching audience</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('challenge', 'PoorKnowledge', this, 3)">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Poor Knowledge of LinkedIn Functions</h3>
+                        <p>Don't understand platform features</p>
+                    </div>
+                    <div class="option-card" onclick="selectMultipleOption('challenge', 'FindingFocusGroups', this, 3)">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Finding Focus Groups</h3>
+                        <p>Don't know target audience</p>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="btn-secondary" onclick="goToStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="btn-primary" onclick="validateMultipleAndNext(4, 'challenge', 1)">
+                        Continue <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 5: Specific Post Topic -->
+        <div class="screen" id="question5">
+            <div class="question-container">
+                <span class="step-indicator">Question 5 of 5</span>
+                <h2 class="question-title">Tell us about your next LinkedIn post</h2>
+                <p class="question-subtitle">We'll create a custom ultra-detailed prompt for this specific topic</p>
+                
+                <div class="input-section">
+                    <label for="postTopic" class="input-label">
+                        <i class="fas fa-edit"></i> What topic do you want to post about?
+                    </label>
+                    <textarea 
+                        id="postTopic" 
+                        class="textarea-field" 
+                        placeholder="Example: 'How AI is transforming customer service in B2B SaaS companies' or 'My personal journey from junior developer to CTO'"
+                        rows="6"
+                    ></textarea>
+                    <p class="helper-text">
+                        <i class="fas fa-info-circle"></i> 
+                        The more specific you are, the better your personalized strategy will be
+                    </p>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="btn-secondary" onclick="goToStep(4)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="btn-primary" onclick="goToEmailCapture()">
+                        Continue to Results <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Capture Screen -->
+        <div class="screen" id="emailScreen">
+            <div class="question-container email-capture">
+                <div class="email-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <h2 class="question-title">Get Your Personalized Strategy</h2>
+                <p class="question-subtitle">Enter your email to receive your comprehensive LinkedIn AEO strategy</p>
+                
+                <div class="value-list">
+                    <div class="value-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Psychological profile analysis</span>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>3 custom AI prompts worth $150+</span>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Niche-specific content strategy</span>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Personalized tool recommendations</span>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Data-driven optimization plan</span>
+                    </div>
+                </div>
+
+                <form id="emailForm" onsubmit="submitEmail(event)">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input 
+                            type="email" 
+                            id="userEmail" 
+                            class="input-field" 
+                            placeholder="your.email@company.com" 
+                            required
+                        >
+                    </div>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input 
+                            type="text" 
+                            id="userName" 
+                            class="input-field" 
+                            placeholder="Your Full Name" 
+                            required
+                        >
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">
+                            I agree to receive my personalized strategy and occasional LinkedIn tips
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-large">
+                        <i class="fas fa-magic"></i> Generate My Strategy Now
+                    </button>
+                </form>
+
+                <p class="privacy-text">
+                    <i class="fas fa-lock"></i> Your data is secure and will never be shared
+                </p>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="screen" id="resultsScreen">
+            <div class="results-container">
+                <div class="results-header">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <h1>Your Personalized LinkedIn AEO Strategy</h1>
+                    <p class="results-subtitle">Based on your unique profile and goals</p>
+                </div>
+
+                <div id="resultsContent">
+                    <!-- Results will be dynamically generated here -->
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn-primary" onclick="downloadResults()">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                    <button class="btn-secondary" onclick="shareOnLinkedIn()">
+                        <i class="fab fa-linkedin"></i> Share on LinkedIn
+                    </button>
+                    <button class="btn-secondary" onclick="restartQuiz()">
+                        <i class="fas fa-redo"></i> Start New Assessment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with HiFuture Branding -->
+    <footer class="hifuture-footer">
+        <p class="footer-text">© 2026 HiFuture Consulting Agency</p>
+    </footer>
+
+    <script src="js/quiz.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>
